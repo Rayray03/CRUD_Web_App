@@ -1,7 +1,5 @@
-import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
-import Hamburger from "hamburger-react";
 
 export default function NavBar() {
   return (
