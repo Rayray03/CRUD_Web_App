@@ -1,43 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
+import Hamburger from "hamburger-react";
 
 export default function NavBar() {
   return (
-    <header className="bg-blue-900">
-      <div className="container mx-auto flex justify-between">
-        <nav className="flex">
-          <NavLink
-            to="/"
-            exact
-            activeClassName="text-white"
-            className="inflex-flex items-center py-6 px-3 mr-4 text-cyan-100 hover:text-purple-300 text-4xl font-bold cursive tracking-widest"
-          >
-            Ray
-          </NavLink>
-          <NavLink
-            to="/post"
-            className="inline-flex items-center py-3 px-3 my-6 rounded text-purple-200 hover:text-purple-300"
-            activeClassName="text-blue-100 bg-blue-700"
-          >
-            Blog Posts
-          </NavLink>
-          <NavLink
-            to="/project"
-            className="inline-flex items-center py-3 px-3 my-6 rounded text-purple-200 hover:text-purple-300"
-            activeClassName="text-blue-100 bg-blue-700"
-          >
-            Projects
-          </NavLink>
-          <NavLink
-            to="/about"
-            className="inline-flex items-center py-3 px-3 my-6 rounded text-purple-200 hover:text-purple-300"
-            activeClassName="text-blue-100 bg-blue-700"
-          >
-            About Me!
-          </NavLink>
-        </nav>
-        <div className="inline-flex py-3 px-3 my-6">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <NavLink
+        to="/"
+        exact
+        activeClassName="text-white"
+        className="inflex-flex items-center py-6 px-2 mr-4 text-black hover:text-purple-300 text-4xl font-bold cursive tracking-widest"
+      >
+        Ray
+      </NavLink>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarText"
+        aria-controls="navbarText"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <NavLink
+              to="/post"
+              className="inline-flex items-center py-2 px-2 my-6 rounded text-purple-200 hover:text-purple-300"
+              activeClassName="text-blue-100 bg-blue-700"
+            >
+              Blog Posts
+            </NavLink>
+          </li>
+          <li class="nav-item">
+            <NavLink
+              to="/project"
+              className="inline-flex items-center py-2 px-2 my-6 rounded text-purple-200 hover:text-purple-300"
+              activeClassName="text-blue-100 bg-blue-700"
+            >
+              Projects
+            </NavLink>
+          </li>
+          <li class="nav-item">
+            <NavLink
+              to="/about"
+              className="inline-flex items-center py-2 px-2 my-6 rounded text-purple-200 hover:text-purple-300"
+              activeClassName="text-blue-100 bg-blue-700"
+            >
+              About Me!
+            </NavLink>
+          </li>
+        </ul>
+        <span class="navbar-text">
           <SocialIcon
             url="https://www.linkedin.com/in/rayxw"
             className="mr-4"
@@ -59,8 +77,8 @@ export default function NavBar() {
             fgColor="#fff"
             style={{ height: 35, width: 35 }}
           />
-        </div>
+        </span>
       </div>
-    </header>
+    </nav>
   );
 }
