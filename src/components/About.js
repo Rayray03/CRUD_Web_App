@@ -38,7 +38,7 @@ export default function About() {
             alt={author.name}
           />
           <div className="text-lg flex flex-col justify-center">
-            <h1 className="cursive text-6xl text-blue-300 mb-4">
+            <h1 className="cursive text-5xl text-blue-300 mb-4">
               Welcome to my page, I'm{" "}
               <span className="text-blue-100">{author.name}</span>
             </h1>
