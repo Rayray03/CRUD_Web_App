@@ -8,7 +8,7 @@ export default function NavBar() {
         to="/"
         exact
         activeClassName="text-white"
-        className="inflex-flex items-center py-6 px-2 mr-4 text-black hover:text-purple-300 text-4xl font-bold cursive tracking-widest"
+        className="inflex-flex items-center py-6 px-2 mr-4 text-purple-200 hover:text-purple-300 text-4xl font-bold cursive tracking-widest"
       >
         Ray
       </NavLink>

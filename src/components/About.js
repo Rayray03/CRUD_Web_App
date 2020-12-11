@@ -1,7 +1,7 @@
 import BlockContent from "@sanity/block-content-to-react";
 import React, { useEffect, useState } from "react";
 import sanityClient from "../client.js";
-import block from "../block.jpg";
+import aboutme from "../aboutme.jpg";
 import imageUrlBuilder from "@sanity/image-url";
 
 const builder = imageUrlBuilder(sanityClient);
@@ -28,8 +28,8 @@ export default function About() {
   if (!author) return <div>Loading...</div>;
 
   return (
-    <main className="relative">
-      <img src={block} alt="blockbg" className="absolute w-full" />
+    <main className="relative bg-gray-800">
+      <img src={aboutme} alt="aboutme" className="absolute w-full" />
       <div className="p-10 lg:pt-48 container mx-auto relative">
         <section className="bg-blue-600 rounded-lg shadow-2xl lg:flex p-20">
           <img
@@ -37,6 +37,7 @@ export default function About() {
             className="rounded w-32 h-32 lg:w-64 lg:h-64 mr-8"
             alt={author.name}
           />
+          <br></br>
           <div className="text-lg flex flex-col justify-center">
             <h1 className="cursive text-5xl text-blue-300 mb-4">
               Welcome to my page, I'm{" "}
