@@ -73,6 +73,7 @@ export default function Project() {
                 </a>
               </article>
             ))}
+          <br></br>
         </article>
       </section>
     </main>
