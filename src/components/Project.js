@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Card } from "react-bootstrap";
 import sanityClient from "../client.js";
 
 export default function Project() {
