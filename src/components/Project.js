@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Card } from "react-bootstrap";
 import sanityClient from "../client.js";
 
 export default function Project() {
@@ -28,7 +29,7 @@ export default function Project() {
         <h2 className="text-lg text-gray-600vm flex justify-center mb-12">
           Welcome to my projects page!
         </h2>
-        <article>
+        <section className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {projectData &&
             projectData.map((project, index) => (
               <article className="relative rounded-lg shadow-xl bg-white p-16">
@@ -43,18 +44,20 @@ export default function Project() {
                   </a>
                 </h3>
                 <div className="text-gray-500 text-xs space-x-4">
-                  <span>
-                    <strong className="font-bold">Finished on</strong>:{" "}
-                    {new Date(project.date).toLocaleDateString()}
-                  </span>
-                  <span>
-                    <strong className="font-bold">Location</strong>:{" "}
-                    {project.place}
-                  </span>
-                  <span>
-                    <strong className="font-bold">Type</strong>:{" "}
-                    {project.projectType}
-                  </span>
+                  <div className="animate-pulse flex space-x-4">
+                    <span>
+                      <strong className="font-bold">Finished on</strong>:{" "}
+                      {new Date(project.date).toLocaleDateString()}
+                    </span>
+                    <span>
+                      <strong className="font-bold">Location</strong>:{" "}
+                      {project.place}
+                    </span>
+                    <span>
+                      <strong className="font-bold">Type</strong>:{" "}
+                      {project.projectType}
+                    </span>
+                  </div>
                   <p className="my-6 text-lg text-gray-700 leading-relaxed">
                     {project.description}
                   </p>{" "}
@@ -64,7 +67,7 @@ export default function Project() {
                   href={project.link}
                   rel="noreferrer"
                   target="_blank"
-                  className="text-purple-500 font-bold hover:underline hover:text-blue-400"
+                  className="text-purple-500 font-bold hover:underline hover:text-blue-400 animate-bounce w-6 h-6"
                 >
                   View The Project{" "}
                   <span role="img" aria-label="right pointer">
@@ -73,8 +76,8 @@ export default function Project() {
                 </a>
               </article>
             ))}
-          <br></br>
-        </article>
+        </section>
+        <br></br>
       </section>
     </main>
   );

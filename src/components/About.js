@@ -25,7 +25,13 @@ export default function About() {
       .catch(console.error);
   }, []);
 
-  if (!author) return <div>Loading...</div>;
+  if (!author)
+    return (
+      <button type="button" class="bg-rose-600 ..." disabled>
+        <svg class="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24"></svg>
+        Loading...
+      </button>
+    );
 
   return (
     <main className="relative bg-gray-800">
